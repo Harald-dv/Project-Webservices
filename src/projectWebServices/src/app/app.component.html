@@ -1,6 +1,101 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-</div>
+<!-- container section start -->
+  <section id="container" class="">
+
+
+    <header class="header dark-bg">
+      <div class="toggle-nav">
+        <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+      </div>
+
+      <!--logo start-->
+      <a href="index.html" class="logo">instr<span class="lite">Tool</span></a>
+
+      <!--logo end-->
+      <div class="top-nav notification-row">
+        <!-- notificatoin dropdown start-->
+        <ul class="nav pull-right top-menu">
+          <!-- user login dropdown start-->
+          <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+              <span class="username">{{instructorName}}</span>
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu extended logout">
+              <div class="log-arrow-up"></div>
+              <li class="eborder-top">
+                <a href="#"><i class="icon_profile"></i>Profiel</a>
+              </li>
+              <li>
+                <a href="login.html"><i class="icon_key_alt"></i>Log Uit</a>
+              </li>
+            </ul>
+          </li>
+          <!-- user login dropdown end -->
+        </ul>
+        <!-- notificatoin dropdown end-->
+      </div>
+    </header>
+    <!--header end-->
+
+    <!--sidebar start-->
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu">
+          <li>
+            <form>
+              <span><input class="dateInput" type="date" name="dateReport" min="2010-01-02"></span>
+            </form>
+          </li>
+          <li class="active">
+            <a class="" href="index.html">
+                <span>Overzicht</span>
+            </a>
+          </li>
+          <li class="">
+            <a class="" href="index.html">
+                <span>Nieuw Verslag</span>
+            </a>
+          </li>
+        </ul>
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
+    <!--sidebar end-->
+
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper">
+        <!--overview start-->
+        <div class="row">
+          <div class="col-lg-12">
+            <h3 class="page-header"><i class="fa fa-calendar"></i>Overzicht</h3>
+          </div>
+        </div>
+
+        <div class="row">
+
+        </div>
+        <!--/.row-->
+        <div class="row">
+          <div class="col-lg-8 col-md-12">
+                <app-overzicht></app-overzicht>
+          </div>
+        </div>
+
+      </section>
+      <div class="text-right">
+        <div class="credits">
+          <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
+          -->
+          <a href="https://bootstrapmade.com/">Free Bootstrap Templates</a> by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </section>
+    <!--main content end-->
+  </section>
+  <!-- container section start -->
