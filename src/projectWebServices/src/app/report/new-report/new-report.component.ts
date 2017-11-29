@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewReportComponent implements OnInit {
 
+  instructorName="Naam Onbekend"
   constructor() { }
 
   ngOnInit() {

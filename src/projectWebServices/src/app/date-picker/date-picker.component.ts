@@ -7,8 +7,6 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./date-picker.component.css']
 })
 export class DatePickerComponent implements OnInit {
-
-  dateString="testdatum";
   date = 0;
 
   constructor(private route: ActivatedRoute) { }

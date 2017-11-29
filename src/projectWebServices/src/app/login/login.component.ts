@@ -10,6 +10,7 @@ export class LoginComponent implements OnInit {
   @ViewChild('openModal') openModal:ElementRef;
 
   title = 'app works!';
+  loggedIn=0;
 
   ngOnInit(){
    this.openModal.nativeElement.click();
