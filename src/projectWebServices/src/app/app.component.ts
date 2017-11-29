@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
-  selectedDate = "28/11"
+  date = 100;
   instructorName = 'Naam Instructeur';
 }

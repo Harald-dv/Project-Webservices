@@ -8,7 +8,7 @@
       </div>
 
       <!--logo start-->
-      <a href="index.html" class="logo">instr<span class="lite">Tool</span></a>
+      <a href="" class="logo">instr<span class="lite">Tool</span></a>
 
       <!--logo end-->
       <div class="top-nav notification-row">
@@ -23,10 +23,10 @@
             <ul class="dropdown-menu extended logout">
               <div class="log-arrow-up"></div>
               <li class="eborder-top">
-                <a href="#"><i class="icon_profile"></i>Profiel</a>
+                <a><i class="icon_profile"></i>Profiel</a> <!-- routerLink="#" -->
               </li>
               <li>
-                <a href="login.html"><i class="icon_key_alt"></i>Log Uit</a>
+                <a routerLink="/login"><i class="icon_key_alt"></i>Log Uit</a>
               </li>
             </ul>
           </li>
@@ -43,18 +43,20 @@
         <!-- sidebar menu start-->
         <ul class="sidebar-menu">
           <li>
-            <form>
-              <span><input class="dateInput" type="date" name="dateReport" min="2010-01-02"></span>
+            <form class=dateBar action="/search">
+              <p>Datum:<p>
+              <input class="dateField dateInput" type="date" min="2010-01-02">
             </form>
+            <button routerLink="/search/{{date}}" class="dateField btn btn-primary">Ga</button>
           </li>
-          <li class="active">
-            <a class="" href="index.html">
+          <li routerLinkActive="active">
+            <a class="" routerLink="/">
                 <span>Overzicht</span>
             </a>
           </li>
-          <li class="">
-            <a class="" href="index.html">
-                <span>Nieuw Verslag</span>
+          <li routerLinkActive="active">
+            <a class="" routerLink="/edit">
+                <i class="fa fa-pencil-square" aria-hidden="true"></i><span>Nieuw Verslag</span>
             </a>
           </li>
         </ul>
@@ -69,7 +71,6 @@
         <!--overview start-->
         <div class="row">
           <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-calendar"></i>Overzicht</h3>
           </div>
         </div>
 
@@ -79,7 +80,7 @@
         <!--/.row-->
         <div class="row">
           <div class="col-lg-8 col-md-12">
-                <app-overzicht></app-overzicht>
+                <router-outlet></router-outlet>
           </div>
         </div>
 
