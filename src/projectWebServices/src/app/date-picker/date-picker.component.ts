@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-date-picker',
@@ -14,7 +14,16 @@ export class DatePickerComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    //this.date = this.route.snapshot.params['date'];
     this.date = this.route.snapshot.params['date'];
+
+    this.route.params
+    .subscribe(
+      (params: Params) => {
+        this.date = params['date'];
+      }
+    );
+
   }
 
 }

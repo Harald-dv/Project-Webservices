@@ -14,6 +14,9 @@ Als project maak ik een tool waarop instructeurs van de zweefvliegclub kunnen in
 
 ## Components ##
 
+login
+overzicht
+date-picker
+edit-report
 
-## Database ##
       placehold
