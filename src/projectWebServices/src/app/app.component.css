@@ -117,8 +117,6 @@ table tr th { color: #688a7e;}
     background: #394a59;
 }
 
-
-
 .nav-collapse.collapse {
     display: inline;
 }
@@ -190,29 +188,19 @@ ul.sidebar-menu li ul.sub li a:hover, ul.sidebar-menu li ul.sub li.active a {
 ul.sidebar-menu li{
 
     line-height: 20px !important;
-
     /*margin-bottom: 5px;
-
     margin-left:10px;
-
     margin-right:10px;*/
-
-
-
 }
 
 /*ul.sidebar-menu li:hover{
-
     border-bottom: 1px solid #688a7e;
-
 }*/
 
 ul.sidebar-menu li.sub-menu{
     line-height: 15px;
     font-size: 16px;
 }
-
-
 
 ul.sidebar-menu li a span{
     display: inline-block;
@@ -280,7 +268,6 @@ ul.sidebar-menu li.active a i {
     color: #fff;
 }
 
-
 #sidebar ul > li > a .arrow {
     border-bottom: 4px solid transparent;
     border-left: 4px solid #A0A0A0;
@@ -309,8 +296,6 @@ ul.sidebar-menu li.active a i {
     width: 0;
 }
 
-
-
 #sidebar ul > li.active > a .arrow, #sidebar ul > li > a:hover .arrow, #sidebar ul > li > a:focus .arrow {
     float: right;
     margin-top: 6px;
@@ -336,11 +321,9 @@ ul.sidebar-menu li.active a i {
 /*main content*/
 
 
-
 #main-content {
     margin-left: 200px;
 }
-
 
 
 .header, .footer {
@@ -399,18 +382,10 @@ a.logo:hover, a.logo:focus {
 
 
 a.logo span {
-
     color: #688a7e;
-
 }
 
-
-
-
-
 /*notification*/
-
-
 
 #top_menu .nav > li, ul.top-menu > li {
 
@@ -441,17 +416,12 @@ ul.top-menu > li > a {
     margin-right: 15px;
 }
 
-
-
 ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 
     background: transparent !important;
 
     color: #D7D7D7 !important;
-
 }
-
-
 
 .notification-row .badge {
     position: absolute;
@@ -491,14 +461,9 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
 }
 
 .navbar-form{
-
     padding: 0px;
-
     margin: 0 0 0 10px;
-
 }
-
-
 
 .navbar-form .form-control{
     width: 200px;
@@ -508,8 +473,6 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     margin-top: 1px;
 }
 
-
-
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 
     /* Safari and Chrome */
@@ -517,9 +480,7 @@ ul.top-menu > li > a:hover, ul.top-menu > li > a:focus {
     .dropdown-menu.extended  {
 
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.176) !important;
-
     };
-
 }
 
 /* bootstrape editor*/
@@ -569,14 +530,10 @@ div[data-role="editor-toolbar"] {
     padding: 10px;
 }
 
-
-
 .dropdown-menu.extended li p.green {
     background-color: #4cd964;
     color: #fff;
 }
-
-
 
 .dropdown-menu.extended li p.red {
     background-color: #00a0df;
@@ -594,46 +551,27 @@ div[data-role="editor-toolbar"] {
     background-color: #fcb322;
     color: #fff;
 }
-
-
-
 .dropdown-menu.extended li a {
     border-bottom: 1px solid #EBEBEB !important;
     font-size: 12px;
     list-style: none;
 }
-
-
-
 .dropdown-menu.extended li a {
     padding: 15px 10px !important;
     width: 100%;
     display: inline-block;
 }
 
-
-
 .dropdown-menu.extended li a:hover {
-
     background-color: #F7F8F9 !important;
-
     color: #2E2E2E;
-
     border-bottom: 1px solid #688a7e !important;
-
 }
-
-
 
 .dropdown-menu.tasks-bar .task-info .desc {
-
     font-size: 13px;
-
     font-weight: normal;
-
 }
-
-
 
 .dropdown-menu.tasks-bar .task-info .percent {
     display: inline-block;
@@ -644,14 +582,10 @@ div[data-role="editor-toolbar"] {
     margin-top: -4px;
 }
 
-
-
 .dropdown-menu.extended .progress {
     margin-bottom: 0 !important;
     height: 10px;
 }
-
-
 
 .dropdown-menu.inbox li a .photo img {
     border-radius: 2px 2px 2px 2px;
@@ -661,23 +595,14 @@ div[data-role="editor-toolbar"] {
     width: 40px;
 }
 
-
-
 .dropdown-menu.inbox li a .subject {
     display: block;
 }
 
-
-
 .dropdown-menu.inbox li a .subject .from {
-
     font-size: 12px;
-
     font-weight: 600;
-
 }
-
-
 
 .dropdown-menu.inbox li a .subject .time {
     font-size: 11px;
@@ -686,8 +611,6 @@ div[data-role="editor-toolbar"] {
     position: absolute;
     right: 5px;
 }
-
-
 
 .dropdown-menu.inbox li a .message {
     display: block !important;
@@ -792,8 +715,6 @@ div[data-role="editor-toolbar"] {
     top: 50px;
 }
 
-
-
 .top-nav .nav .caret {
     border-bottom-color: #A4AABA;
     border-top-color: #A4AABA;
@@ -804,20 +725,12 @@ div[data-role="editor-toolbar"] {
     border-top-color: #7498f1;
 }
 
-
-
 .log-arrow-up {
-
     background: url("/img/arrow-up.png") no-repeat;
-
     width: 20px;
-
     height: 11px;
-
     position: absolute;
-
     right: 20px;
-
     top: -10px;
 
 }
@@ -825,29 +738,17 @@ div[data-role="editor-toolbar"] {
 /*----*/
 
 .page-header {
-
   margin: 12px 0 20px;
-
   border-bottom: none;
-
   opacity: 0.7;
-
   text-transform: uppercase;
-
 }
 
 .page-header i {
-
   color: #acb1b8;
-
   margin-right: 10px;
-
   float: left;
-
   font-size: 30px;
-
   line-height: 22px;
-
   opacity: 0.8;
-
 }

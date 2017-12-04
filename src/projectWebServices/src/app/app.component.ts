@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  date="";
   instructorName = 'Naam Instructeur';
 }

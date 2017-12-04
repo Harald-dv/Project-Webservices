@@ -8,7 +8,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class EditReportComponent implements OnInit {
   date=0;
-
+  instructorName="Naam Onbekend"
+  
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
