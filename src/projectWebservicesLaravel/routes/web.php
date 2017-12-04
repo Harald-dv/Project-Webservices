@@ -12,9 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return View::make('index');
 });
 
 Route::any('{catchall}', function() {
-  return View==make('index');
+  return View::make('index');
 })->where('catchall', '.*');
