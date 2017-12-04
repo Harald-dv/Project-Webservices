@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpErrorResponse} from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-overzicht',
@@ -6,22 +8,44 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./overzicht.component.css']
 })
 export class OverzichtComponent implements OnInit {
+  reportObs: Observable<any>;
+  instrObs: Observable<any>;
 
-  verlagen = [
-    { "id": 1, "date": "2017-11-24", "instructorName": "Jef","verslagTekst":
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-    },
-    { "id": 2, "date": "2017-11-23", "instructorName": "Willy","verslagTekst":
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-    },
-    { "id": 3, "date": "2017-11-22", "instructorName": "Francis","verslagTekst":
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-    }
-  ];
 
-  constructor() { }
+  instructor: {id: number, name: string}[] = [];
+  report: {id: number, date: string, instructorId: number, body: string}[] = [];
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
+    this.reportObs = this.http.get('http://localhost:3000/report');
+    this.instrObs = this.http.get('http://localhost:3000/instructor');
+
+    this.reportObs.subscribe(
+      (data) => {
+        this.report=data;
+        //console.log(this.report);
+      },
+      (err: HttpErrorResponse) => {
+        console.log(err);
+      },
+      () => {
+        //console.log("Klaar!");
+      }
+    )
+
+    this.instrObs.subscribe(
+      (data) => {
+        this.instructor=data;
+        console.log(this.instructor);
+      },
+      (err: HttpErrorResponse) => {
+        console.log(err);
+      },
+      () => {
+        //console.log("Klaar!");
+      }
+    )
   }
 
 }
