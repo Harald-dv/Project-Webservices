@@ -1,0 +1,38 @@
+{
+  "instructor": [
+    {
+      "id": 1,
+      "name": "Bert Van Eyken"
+    },
+    {
+      "id": 2,
+      "name": "Yves Van Langenhove"
+    }
+  ],
+  "report": [
+    {
+      "id": 1,
+      "date": "2017-11-10",
+      "instructorId":1,
+      "body": "verslagtekst 1 Hallo dit is een stukje lorem ipsum. Maar dan geen echte. verslagtekst. Hallo dit is een stukje lorem ipsum. Maar dan geen echte."
+    },
+    {
+      "id": 2,
+      "date": "2017-11-11",
+      "instructorId":2,
+      "body": "tekst 2"
+    },
+    {
+      "id": 3,
+      "date": "2017-11-18",
+      "instructorId":1,
+      "body": "verslagtekst 3 Hallo dit is een stukje lorem ipsum. Maar dan geen echte. verslagtekst. Hallo dit is een stukje lorem ipsum. Maar dan geen echte."
+    },
+    {
+      "id": 4,
+      "date": "2017-11-19",
+      "instructorId":2,
+      "body": "Lepo is tegen een boom gereden."
+    }
+  ]
+}
