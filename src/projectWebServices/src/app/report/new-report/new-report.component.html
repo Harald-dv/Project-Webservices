@@ -10,12 +10,11 @@
             (ngModelChange)="selectedDate=$event" min="2017-01-01" max="2100-01-01" >
         </div>
       </div>
-      Verslag: <textarea required type="textarea" name="verslag" class="form-control report"></textarea>
+      Verslag: <textarea [(ngModel)]="reportContent" required type="textarea" name="verslag" class="form-control report"></textarea>
     </form>
     <div class="row">
       <div class="col-md-4">
-        <a class="btn btn-success">Bevestigen</a><a class="btn btn-danger">Annuleren</a>
-        <div>{{ selectedDate }}</div>
+        <a (click)="confirmClicked()" class="btn btn-success">Bevestigen</a><a routerLink="/" class="btn btn-danger">Annuleren</a>
       </div>
     </div>
   </div>

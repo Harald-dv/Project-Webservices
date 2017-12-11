@@ -1,4 +1,6 @@
-import { HttpClient, HttpErrorResponse} from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
+import { Router, ActivatedRoute } from '@angular/router';
+
 import { Observable } from 'rxjs/Observable';
 
 import { Injectable } from '@angular/core';
@@ -8,11 +10,37 @@ export class ReportDbService {
 
   reportObs: Observable<any>;
   instrObs: Observable<any>;
+  addReportObs: Observable<any>;
 
   instructor: {id: number, name: string}[] = [];
   report: {id: number, date: string, instructorId: number, body: string}[] = [];
 
-  constructor(private http: HttpClient) {
+  newReport: {date: string, instructorId: number, body: string};
+
+  constructor(private http: HttpClient, private route: ActivatedRoute,
+  private router: Router,) {
+  }
+
+  addReport(newReport: {date: string, instructorId: number, body: string}){
+    //console.log(newReport);
+    this.addReportObs = this.http.post('http://localhost:3000/report',
+    JSON.stringify(newReport),
+    {headers: new HttpHeaders().set('Content-type', 'application/json')}
+  );
+  console.log("report gepost:",JSON.stringify(newReport));
+
+  this.addReportObs.subscribe(
+    (data) => {
+
+    },
+    (err: HttpErrorResponse)=> {
+      console.log(err);
+    },
+    () => {
+       this.router.navigate(['/']);
+    }
+  )
+
   }
 
   getReport(){
@@ -23,6 +51,10 @@ export class ReportDbService {
   getInstructor(){
     this.instrObs = this.http.get('http://localhost:3000/instructor');
     return this.instrObs;
+  }
+
+  delReport(){
+
   }
 
 }

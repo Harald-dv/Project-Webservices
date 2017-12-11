@@ -13,26 +13,50 @@
     {
       "id": 1,
       "date": "2017-11-10",
-      "instructorId":1,
+      "instructorId": 1,
       "body": "verslagtekst 1 Hallo dit is een stukje lorem ipsum. Maar dan geen echte. verslagtekst. Hallo dit is een stukje lorem ipsum. Maar dan geen echte."
     },
     {
       "id": 2,
       "date": "2017-11-11",
-      "instructorId":2,
+      "instructorId": 2,
       "body": "tekst 2"
     },
     {
       "id": 3,
       "date": "2017-11-18",
-      "instructorId":1,
+      "instructorId": 1,
       "body": "verslagtekst 3 Hallo dit is een stukje lorem ipsum. Maar dan geen echte. verslagtekst. Hallo dit is een stukje lorem ipsum. Maar dan geen echte."
     },
     {
       "id": 4,
       "date": "2017-11-19",
-      "instructorId":2,
+      "instructorId": 2,
       "body": "Lepo is tegen een boom gereden."
+    },
+    {
+      "date": "2017-12-11",
+      "instructorId": 1,
+      "body": "dit is een testverslag",
+      "id": 5
+    },
+    {
+      "date": "2017-12-12",
+      "instructorId": 1,
+      "body": "testverslag 2",
+      "id": 6
+    },
+    {
+      "date": "2017-12-19",
+      "instructorId": 1,
+      "body": "Testverlag5",
+      "id": 7
+    },
+    {
+      "date": "2017-12-20",
+      "instructorId": 1,
+      "body": "Emmelie heeft een vliegtuig gepoetst",
+      "id": 8
     }
   ]
 }

@@ -14,36 +14,34 @@ export class OverzichtComponent implements OnInit {
 
   instructor: {id: number, name: string}[] = [];
   report: {id: number, date: string, instructorId: number, body: string}[] = [];
+  show: boolean = false;
 
   constructor(private db: ReportDbService, private http: HttpClient) {
-    //this.instructor = this.db.getInstructor();
-    //this.report = this.db.getReport();
-    //console.log(this.report);
   }
   ngOnInit() {
-    //this.report = this.db.getReport();
     this.db.getReport().subscribe(
       (data) => {
         this.report= data;
-        console.log(this.db.report);
+        //console.log(this.db.report);
       },
       (err: HttpErrorResponse) => {
         console.log(err);
       },
       () => {
-        //console.log("Klaar!");
       }
     )
+
     this.db.getInstructor().subscribe(
       (data) => {
         this.instructor= data;
-        console.log(this.db.report);
+        //console.log(this.db.instructor);
       },
       (err: HttpErrorResponse) => {
         console.log(err);
       },
       () => {
         //console.log("Klaar!");
+        this.show=true;
       }
     )
   }
