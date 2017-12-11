@@ -2,29 +2,30 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
+import {ReportDbService} from '../report-db.service';
+
 @Component({
   selector: 'app-overzicht',
   templateUrl: './overzicht.component.html',
-  styleUrls: ['./overzicht.component.css']
+  styleUrls: ['./overzicht.component.css'],
+  providers: [ReportDbService]
 })
 export class OverzichtComponent implements OnInit {
-  reportObs: Observable<any>;
-  instrObs: Observable<any>;
-
 
   instructor: {id: number, name: string}[] = [];
   report: {id: number, date: string, instructorId: number, body: string}[] = [];
 
-  constructor(private http: HttpClient) { }
-
+  constructor(private db: ReportDbService, private http: HttpClient) {
+    //this.instructor = this.db.getInstructor();
+    //this.report = this.db.getReport();
+    //console.log(this.report);
+  }
   ngOnInit() {
-    this.reportObs = this.http.get('http://localhost:3000/report');
-    this.instrObs = this.http.get('http://localhost:3000/instructor');
-
-    this.reportObs.subscribe(
+    //this.report = this.db.getReport();
+    this.db.getReport().subscribe(
       (data) => {
-        this.report=data;
-        //console.log(this.report);
+        this.report= data;
+        console.log(this.db.report);
       },
       (err: HttpErrorResponse) => {
         console.log(err);
@@ -33,11 +34,10 @@ export class OverzichtComponent implements OnInit {
         //console.log("Klaar!");
       }
     )
-
-    this.instrObs.subscribe(
+    this.db.getInstructor().subscribe(
       (data) => {
-        this.instructor=data;
-        console.log(this.instructor);
+        this.instructor= data;
+        console.log(this.db.report);
       },
       (err: HttpErrorResponse) => {
         console.log(err);
@@ -47,5 +47,4 @@ export class OverzichtComponent implements OnInit {
       }
     )
   }
-
 }
