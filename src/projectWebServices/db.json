@@ -57,6 +57,18 @@
       "instructorId": 1,
       "body": "Emmelie heeft een vliegtuig gepoetst",
       "id": 8
+    },
+    {
+      "date": "2017-12-12",
+      "instructorId": 1,
+      "body": "Den timo is een flieterke",
+      "id": 9
+    },
+    {
+      "date": "2017-12-13",
+      "instructorId": 1,
+      "body": "De Jenne is een flieterke. ",
+      "id": 10
     }
   ]
 }
