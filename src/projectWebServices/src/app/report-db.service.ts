@@ -44,12 +44,12 @@ export class ReportDbService {
   }
 
   getReport(){
-    this.reportObs = this.http.get('http://localhost:3000/report');
+    this.reportObs = this.http.get('/api/getreports');
     return this.reportObs;
   }
 
   getInstructor(){
-    this.instrObs = this.http.get('http://localhost:3000/instructor');
+    this.instrObs = this.http.get('/api/getinstructors');
     return this.instrObs;
   }
 

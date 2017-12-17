@@ -13,6 +13,28 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//api/newreport
+Route::post('/addreport', [
+  'uses' => 'ReportController@addReport'
+]);
+
+Route::get('/getreports', [
+  'uses' => 'ReportController@getReports'
+]);
+
+Route::get('/getreport/{date}', [
+  'uses' => 'ReportController@getReport'
+]);
+
+Route::patch('/patchreport/{date}', [
+  'uses' => 'ReportController@patchReport'
+]);
+
+//instructor
+Route::get('/getinstructors', [
+  'uses' => 'InstructorController@getInstructors'
+]);
+
+Route::get('/getinstructor/{id}', [
+  'uses' => 'InstructorController@getInstructor'
+]);

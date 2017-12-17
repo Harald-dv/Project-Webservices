@@ -11,35 +11,35 @@ class instructor_seed extends Seeder
      */
     public function run()
     {
-        DB::table('instructor')->insert([
+        DB::table('instructors')->insert([
             'name' => 'Bert Van Eyken',
             'active' => 1,
             'email' => 'bert@gmail.com',
             'password' => bcrypt('secret'),
             'remember_token'=> str_random(10),
         ]);
-        DB::table('instructor')->insert([
+        DB::table('instructors')->insert([
             'name' => 'Yves Van Langenhove',
             'active' => 1,
             'email' => 'yves@gmail.com',
             'password' => bcrypt('secret'),
             'remember_token'=> str_random(10),
         ]);
-        DB::table('instructor')->insert([
+        DB::table('instructors')->insert([
             'name' => 'Jef Szeker',
             'active' => 1,
             'email' => 'Jef@gmail.com',
             'password' => bcrypt('secret'),
             'remember_token'=> str_random(10),
         ]);
-        DB::table('instructor')->insert([
+        DB::table('instructors')->insert([
             'name' => 'Didier Kenens',
             'active' => 1,
             'email' => 'didi@gmail.com',
             'password' => bcrypt('secret'),
             'remember_token'=> str_random(10),
         ]);
-        DB::table('instructor')->insert([
+        DB::table('instructors')->insert([
             'name' => 'Steven Thielemans',
             'active' => 0,
             'email' => 'steve@gmail.com',

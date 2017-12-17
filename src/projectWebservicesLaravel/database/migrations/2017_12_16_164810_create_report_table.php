@@ -13,7 +13,7 @@ class CreateReportTable extends Migration
      */
     public function up()
     {
-      Schema::create('report', function (Blueprint $table) {
+      Schema::create('reports', function (Blueprint $table) {
           $table->increments('id');
           $table->integer('instructorId');
           $table->date('date');
@@ -28,6 +28,6 @@ class CreateReportTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('report');
+        Schema::dropIfExists('reports');
     }
 }
