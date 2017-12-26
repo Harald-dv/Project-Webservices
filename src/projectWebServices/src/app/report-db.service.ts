@@ -11,11 +11,12 @@ export class ReportDbService {
   reportObs: Observable<any>;
   instrObs: Observable<any>;
   addReportObs: Observable<any>;
+  patchReportObs: Observable<any>;
 
   instructor: {id: number, name: string}[] = [];
-  report: {id: number, date: string, instructorId: number, body: string}[] = [];
 
-  newReport: {date: string, instructorId: number, body: string};
+  newReport: {id: number, date: string, instructorId: number, body: string};
+  reportPatch: {id: number, date: string, instructorId: number, body: string};
 
   constructor(private http: HttpClient, private route: ActivatedRoute,
   private router: Router,) {
@@ -23,24 +24,22 @@ export class ReportDbService {
 
   addReport(newReport: {date: string, instructorId: number, body: string}){
     //console.log(newReport);
-    this.addReportObs = this.http.post('http://localhost:3000/report',
+    this.addReportObs = this.http.post('/api/addreport',
     JSON.stringify(newReport),
     {headers: new HttpHeaders().set('Content-type', 'application/json')}
   );
-  console.log("report gepost:",JSON.stringify(newReport));
+  //console.log("report gepost:",JSON.stringify(newReport));
 
-  this.addReportObs.subscribe(
-    (data) => {
-
-    },
-    (err: HttpErrorResponse)=> {
-      console.log(err);
-    },
-    () => {
-       this.router.navigate(['/']);
-    }
-  )
-
+    this.addReportObs.subscribe(
+      () => {
+      },
+      (err: HttpErrorResponse)=> {
+        console.log(err);
+      },
+      ()=>{
+        this.router.navigate(['/']);
+      }
+    )
   }
 
   getReport(){
@@ -48,13 +47,32 @@ export class ReportDbService {
     return this.reportObs;
   }
 
+  getReportByDate(date){
+    this.reportObs = this.http.get('api/getreport/'+date);
+    return this.reportObs;
+  }
+
+  patchReport(reportPatch: {id: number, date: string, instructorId: number, body: string}){
+    this.patchReportObs = this.http.patch('/api/patchreport',
+    JSON.stringify(reportPatch),
+    {headers: new HttpHeaders().set('Content-type', 'application/json')},
+  );
+  //console.log("report aanpassing",JSON.stringify(reportPatch));
+  this.patchReportObs.subscribe(
+    () => {
+    },
+    (err: HttpErrorResponse)=> {
+      console.log(err);
+    },
+    ()=>{
+      this.router.navigate(['/']);
+    }
+  )
+  }
+
   getInstructor(){
     this.instrObs = this.http.get('/api/getinstructors');
     return this.instrObs;
-  }
-
-  delReport(){
-
   }
 
 }
