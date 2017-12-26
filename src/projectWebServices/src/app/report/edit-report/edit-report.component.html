@@ -1,19 +1,30 @@
-<div class="row">
-  <div class="col-md-12">
-    <form>
+<ng-container *ngIf="show">
+  <div class="row">
+    <div class="col-md-12">
+      <form>
+        <div class="row">
+          <div class="col-md-12">
+              <h3>Bewerk Verslag</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            Instructeur: <input type="text" name="Instructor" disabled="true" class="form-control" value="{{instructor[report.instructorId-1].name}}">
+          </div>
+          <div class="col-md-4">
+            Datum: <input type="text" name="date" value="{{ report.date }}" disabled="true" class="form-control">
+          </div>
+        </div>
+        Verslag: <textarea type="textarea" [(ngModel)] = "report.body" name="verslag" class="form-control report"></textarea>
+      </form>
       <div class="row">
         <div class="col-md-4">
-          <h2>Bewerk Verslag</h2>
-          Instructeur: <input type="text" name="Instructor" disabled="true" class="form-control" value="{{instructorName}}">
-          Datum: <input type="text" name="date" value="{{ date }}" disabled="true" class="form-control">
+          <a (click)="confirmClicked()" class="btn btn-success">Bevestigen</a><a class="btn btn-danger">Annuleren</a>
         </div>
-      </div>
-      Verslag: <textarea type="textarea" name="verslag" class="form-control report"></textarea>
-    </form>
-    <div class="row">
-      <div class="col-md-4">
-        <a class="btn btn-success">Bevestigen</a><a class="btn btn-danger">Annuleren</a>
       </div>
     </div>
   </div>
-</div>
+</ng-container>
+<ng-container *ngIf="noReport">
+  <h2>Oeps er ging iets mis! Dit rapport bestaat niet.</h2>
+</ng-container>

@@ -1,7 +1,7 @@
 <ng-container *ngIf="show">
-<h2>
-    Verslag bekijken
-</h2>
+<h3>
+    Verslag
+</h3>
   <div class="panel panel-default">
     <div class="panel-heading">
       <h2>
@@ -24,4 +24,10 @@
       </div>
     </div>
   </div>
+</ng-container>
+
+<ng-container *ngIf="noReport">
+  <h2>
+      <i class="fa fa-search"></i> Geen verslag gevonden op {{this.date}}
+  </h2>
 </ng-container>

@@ -12,6 +12,9 @@ class VerifyCsrfToken extends BaseVerifier
      * @var array
      */
     protected $except = [
+
+    'login2', //api om een token aan te maken
+    'api/*',
         //
     ];
 }

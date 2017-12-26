@@ -2,9 +2,15 @@
   <div class="col-md-12">
     <form>
       <div class="row">
+        <div class="col-md-12">
+          <h3>Nieuw Verslag</h3>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-md-4">
-          <h2>Nieuw Verslag</h2>
           Instructeur: <input type="text" name="Instructor" class="form-control" disabled="true;" value="{{instructorName}}">
+        </div>
+        <div class="col-md-4">
           Datum: <input required type="date" name="date" class="form-control"
             [ngModel]="today | date: 'yyyy-MM-dd'"
             (ngModelChange)="selectedDate=$event" min="2017-01-01" max="2100-01-01" >

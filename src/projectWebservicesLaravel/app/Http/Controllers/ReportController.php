@@ -11,15 +11,15 @@ class ReportController extends Controller
     {
       $report = new Report();
       $report->date = $request->input('date');
-      $report->body = $request->input('content');
+      $report->instructorId=$request->input('instructorId');
+      $report->body = $request->input('body');
       $report->save();
-
-      //return response()->json(['report' => $report]);
+      return response()->json(['report' => $report]);
     }
 
     public function getReports()
     {
-      $report= Report::all();
+      $report= Report::orderBy('date','desc')->get();
 
       //$report = {"ok", "ok"
       /*
@@ -31,24 +31,25 @@ class ReportController extends Controller
       //return response()->json("ok");
     }
 
-    public function getReport(Request $request)
+    public function getReport($date)
     {
-      $report = Report::find($request);
+      $report = Report::where('date',$date)->first();
       if(!$report){
-        return response()->json(['message' => 'Document not found'], 404);
+        return response()->json(['message' => $date.' No reports found'], 404);
       }
-      return response()->json([$report]);
+      //$report="oke";
+      return response()->json($report);
     }
 
-    public function patchReport(Request $request, $date)
+    public function patchReport(Request $request)
     {
-      $report = Report::find($date);
+      $report = Report::find($request->input('id'));
       if(!$report){
-        return response()->json(['message' => 'Document not found'], 404);
+        return response()->json(['message' => 'Document not found', 'searched with id' => $request->input('id')], 404);
       }
-      $report->report=$request->input('content');
-      $quote->save();
-
-      //return response()->json(['report' => $report]);
+      $report->body = $request->input('body');
+      $report->save();
+      return response()->json(['report' => $report]);
     }
+
 }

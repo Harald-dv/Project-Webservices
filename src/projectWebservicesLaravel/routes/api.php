@@ -26,7 +26,7 @@ Route::get('/getreport/{date}', [
   'uses' => 'ReportController@getReport'
 ]);
 
-Route::patch('/patchreport/{date}', [
+Route::patch('/patchreport', [
   'uses' => 'ReportController@patchReport'
 ]);
 
