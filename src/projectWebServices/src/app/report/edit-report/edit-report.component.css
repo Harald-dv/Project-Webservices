@@ -4,12 +4,13 @@
 
 .btn-success{
   margin-top: 10px;
-  float:left;
-  width: 49%;
 }
 
 .btn-danger{
   margin-top: 10px;
   float: right;
-  width: 49%;
+}
+
+.btn-warning{
+  margin-top: 10px;
 }

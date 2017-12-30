@@ -19,8 +19,9 @@
       Verslag: <textarea [(ngModel)]="reportContent" required type="textarea" name="verslag" class="form-control report"></textarea>
     </form>
     <div class="row">
-      <div class="col-md-4">
-        <a (click)="confirmClicked()" class="btn btn-success">Bevestigen</a><a routerLink="/" class="btn btn-danger">Annuleren</a>
+      <div class="col-md-12">
+        <a (click)="confirmClicked()" class="btn btn-success">Bevestigen</a>
+        <a routerLink="/" class="btn btn-warning">Annuleren</a>
       </div>
     </div>
   </div>

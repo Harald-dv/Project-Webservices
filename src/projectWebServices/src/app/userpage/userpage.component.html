@@ -1,0 +1,49 @@
+<ng-container *ngIf="show">
+  <div class="row">
+    <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-12">
+              <h3>Uw gegevens</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <p>
+              <b>Naam: </b>{{instructorName}}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <p>
+              <b>Email: </b>{{ instructorMail }}
+            </p>
+          </div>
+        </div>
+        <form>
+              <div class="row">
+                <div class="col-md-4">
+                  <hr />
+                  <h4>Wachtwoord wijzigen</h4>
+                  <p>
+                    wachtwoord: <input type="text" name="pw" value="{{ password1 }}" disabled="true" class="form-control">
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <p>
+                    Herhaal wachtwoord: <input type="text" name="pw2" value="{{ password2 }}" disabled="true" class="form-control">
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <a (click)="saveClicked()" class="btn btn-primary">Opslaan</a>
+                  <a class="btn btn-warning">Annuleren</a>
+                </div>
+              </div>
+            </form>
+    </div>
+  </div>
+</ng-container>

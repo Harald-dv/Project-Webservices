@@ -18,8 +18,10 @@
         Verslag: <textarea type="textarea" [(ngModel)] = "report.body" name="verslag" class="form-control report"></textarea>
       </form>
       <div class="row">
-        <div class="col-md-4">
-          <a (click)="confirmClicked()" class="btn btn-success">Bevestigen</a><a class="btn btn-danger">Annuleren</a>
+        <div class="col-md-12">
+          <a (click)="confirmClicked()" class="btn btn-success">Bevestigen</a>
+          <a class="btn btn-warning">Annuleren</a>
+          <a disabled class="btn btn-danger">Verwijderen</a>
         </div>
       </div>
     </div>

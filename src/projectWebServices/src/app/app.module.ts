@@ -14,10 +14,12 @@ import { ReportComponent } from './report/report.component';
 import { LoginComponent } from './login/login.component';
 import { NewReportComponent } from './report/new-report/new-report.component';
 import { EditReportComponent } from './report/edit-report/edit-report.component';
+import { UserpageComponent } from './userpage/userpage.component';
 
 const appRoutes: Routes = [
   { path: '', component: OverzichtComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'user', component: UserpageComponent },
   { path: 'search/:date', component: DatePickerComponent },
   { path: 'report', component: ReportComponent, children: [
     { path: 'new', component: NewReportComponent },
@@ -33,7 +35,8 @@ const appRoutes: Routes = [
     ReportComponent,
     LoginComponent,
     NewReportComponent,
-    EditReportComponent
+    EditReportComponent,
+    UserpageComponent
   ],
   imports: [
     BrowserModule,
