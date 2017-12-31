@@ -13,7 +13,8 @@ import {ReportDbService} from '../../report-db.service';
   providers: [ReportDbService]
 })
 export class EditReportComponent implements OnInit {
-  date: number;
+  id:number;
+
   instructor: {id: number, name: string}[] = [];
   report: {id: number,date: string, instructorId: number, body: string};
 
@@ -24,6 +25,10 @@ export class EditReportComponent implements OnInit {
   noReport: boolean = false;
 
   constructor(private route: ActivatedRoute, private db: ReportDbService, private http: HttpClient) { }
+
+  deleteClicked(){
+    this.db.deleteReport(this.report.id);
+  }
 
   confirmClicked(){
     this.db.patchReport(this.report);
@@ -37,7 +42,7 @@ export class EditReportComponent implements OnInit {
     //console.log("checkShow");
   };
 
-  onDateChange(){
+  onIdChange(){
         this.db.getInstructor().subscribe(
           (data) => {
             this.instructor= data;
@@ -58,7 +63,7 @@ export class EditReportComponent implements OnInit {
           }
         )
 
-        this.db.getReportByDate(this.date).subscribe(
+        this.db.getReportById(this.id).subscribe(
           (data) => {
             this.report= data;
             //console.log(this.db.instructor);
@@ -84,13 +89,13 @@ export class EditReportComponent implements OnInit {
     //this.date = this.route.snapshot.params['date'];
     this.route.params.subscribe(
       (params: Params) => {
-        this.date = params['date'];
-        this.onDateChange();
+        this.id = params['id'];
+        this.onIdChange();
       }
     );
     //this.report = {id: 255, date: this.date.toString(), instructorId: this.instructorId, body: 'dit is de body maar nog zonder inhoud'};
 
-    this.date = this.route.snapshot.params['date'];
+    this.id = this.route.snapshot.params['id'];
     //console.log("ngOnInit");
   }//end of ngOnInit
 }

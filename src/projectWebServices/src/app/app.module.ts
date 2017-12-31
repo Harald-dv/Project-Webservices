@@ -23,7 +23,7 @@ const appRoutes: Routes = [
   { path: 'search/:date', component: DatePickerComponent },
   { path: 'report', component: ReportComponent, children: [
     { path: 'new', component: NewReportComponent },
-    { path: 'edit/:date', component: EditReportComponent }
+    { path: 'edit/:id', component: EditReportComponent }
   ]}
 ];
 

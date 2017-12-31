@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-//api/newreport
+//report
 Route::post('/addreport', [
   'uses' => 'ReportController@addReport'
 ]);
@@ -26,8 +26,16 @@ Route::get('/getreport/{date}', [
   'uses' => 'ReportController@getReport'
 ]);
 
+Route::get('/getreport/id/{id}', [
+  'uses' => 'ReportController@getReportById'
+]);
+
 Route::patch('/patchreport', [
   'uses' => 'ReportController@patchReport'
+]);
+
+Route::delete('/deletereport/{id}', [
+  'uses' => 'ReportController@deleteReport'
 ]);
 
 //instructor

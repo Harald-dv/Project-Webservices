@@ -11,6 +11,7 @@ export class ReportDbService {
   reportObs: Observable<any>;
   instrObs: Observable<any>;
   addReportObs: Observable<any>;
+  deleteReportObs: Observable<any>;
   patchReportObs: Observable<any>;
 
   instructor: {id: number, name: string}[] = [];
@@ -52,6 +53,11 @@ export class ReportDbService {
     return this.reportObs;
   }
 
+  getReportById(id){
+    this.reportObs = this.http.get('api/getreport/id/'+id);
+    return this.reportObs;
+  }
+
   patchReport(reportPatch: {id: number, date: string, instructorId: number, body: string}){
     this.patchReportObs = this.http.patch('/api/patchreport',
     JSON.stringify(reportPatch),
@@ -68,6 +74,21 @@ export class ReportDbService {
       this.router.navigate(['/']);
     }
   )
+  }
+
+  deleteReport(id){
+    this.deleteReportObs = this.http.delete('/api/deletereport/'+id);
+    //console.log('deleteReport fucntion in service')
+    this.deleteReportObs.subscribe(
+      () => {
+      },
+      (err: HttpErrorResponse)=> {
+        console.log(err);
+      },
+      ()=>{
+        this.router.navigate(['/']);
+      }
+    )
   }
 
   getInstructor(){
