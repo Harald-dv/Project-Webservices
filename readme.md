@@ -9,9 +9,9 @@ Als project maak ik een tool waarop instructeurs van de zweefvliegclub kunnen in
 
 ### Documentatie ###
 - README
-- [Apache](.\doc\apache.md)
-- [Https](.\doc\https.md)
-- [Laravel](.\doc\laravel.md)
+- [Apache](./doc/apache.md)
+- [Https](./doc/https.md)
+- [Laravel](./doc/laravel.md)
 
 ----------
 

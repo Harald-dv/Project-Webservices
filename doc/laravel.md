@@ -4,11 +4,10 @@ r0613297
 Deze markdown geeft meer informatie over de configuratie van **laravel** in kader van het project voor webservices.
 
 ### Overzicht ###
-- [README](..\readme.md)
-- [Apache](..\doc\apache.md)
-- [Https](..\doc\https.md)
+- [README](../readme.md)
+- [Apache](../doc/apache.md)
+- [Https](../doc/https.md)
 - Laravel
-
 
 ----------
 

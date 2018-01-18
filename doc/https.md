@@ -4,11 +4,10 @@ r0613297
 Deze markdown geeft meer informatie over de **https** configuratie  in kader van het project voor webservices.
 
 ### Overzicht ###
-- [README](..\readme.md)
-- [Apache](..\doc\apache.md)
+- [README](../readme.md)
+- [Apache](../doc/apache.md)
 - Https
-- [Laravel](..\doc\laravel.md)
-
+- [Laravel](../doc/laravel.md)
 
 ----------
 
