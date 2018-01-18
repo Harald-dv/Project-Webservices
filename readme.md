@@ -24,7 +24,7 @@ Als project maak ik een tool waarop instructeurs van de zweefvliegclub kunnen in
 
 ## Structuur ##
 Onderstaande afbeelding geeft een overzicht van de bestaande angular componenten en de onderlinge structuur.
-![](.\doc\angular_structure.png)
+![](./doc/angular_structure.png)
 
 ## Extra informatie ##
 ### Noip DUC ###
