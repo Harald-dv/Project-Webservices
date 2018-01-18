@@ -1,31 +1,36 @@
 Harald De Vriendt
 r0613297
-# Project Webservices #
+# Project Webservices README #
+
 ## Beschrijving ##
-Als project maak ik een tool waarop instructeurs van de zweefvliegclub kunnen inloggen en vluchtverslagen kunnen schrijven, opslaan en bekijken.
+Als project maak ik een tool waarop instructeurs van de zweefvliegclub kunnen inloggen en vluchtverslagen kunnen schrijven, opslaan en bekijken. Ik heb besloten om de login nog niet te implementeren omdat ik zo meer con focussen op de andere functionaliteit.
 
-### vereisten: ###
-- (inloggen)
-- overzicht verslagen
-- nieuw verslag schrijven
-- bestaand verslag bewerken
-- verslag zoeken op datum
+----------
 
-Deze componenten moeten vertaald worden naar Angular componenten.
+### Documentatie ###
+- README
+- [Apache](.\doc\apache.md)
+- [Https](.\doc\https.md)
+- [Laravel](.\doc\laravel.md)
 
-**bespreken met WDA**
+----------
 
-## Components ##
+### Vereisten: ###
+- Overzicht verslagen
+- Nieuw verslag schrijven
+- Bestaand verslag bewerken
+- Verslag verwijderen
+- Verslag zoeken op datum
 
-### Login ###
-Deze component wordt getoonds als de user nog niet aangemeld is.
-### Overzicht ###
-Wanneer de gebruiker aangemeld is ziet hij het overzicht van alle verslagen met het nieuwste verslag bovenaan.
-### Date-picker ###
-Met deze component kan een verslag van een bepaalde datum getoond worden.
-### Report ###
-#### New Report ####
-Deze component zorgt dat er nieuwe verslagen aangemaakt kunnen worden.
-		controleren of er al een verlag van deze datum is?!
-#### Edit Report ####
-Met deze component kunnen bestaande verslagen aangepast worden. De datum kan uiteraard niet aangepast worden en dus is dat veld uitgeschakeld.
+## Structuur ##
+Onderstaande afbeelding geeft een overzicht van de bestaande angular componenten en de onderlinge structuur.
+![](.\doc\angular_structure.png)
+
+## Extra informatie ##
+### Noip DUC ###
+Omdat ik mijn server thuis host, en ik geen static ip heb gebruik ik de tool van noip.com **DUC** om mijn ip-adres te achterhalen en een gratis url te laten verwijzen naar het juiste ip adres. 
+
+De tool start op bij het opstarten van windows.
+
+### Port forwarding ###
+Om mijn server bereikbaar te maken vanaf het internet moest ik mijn poorten forwarden in de online router configurator van telenet.
