@@ -10,6 +10,15 @@ Deze markdown geeft meer informatie over de configuratie van **laravel** in kade
 - Laravel
 
 ----------
+### api.php ###
+
+In dit project wordt laravel voornamelijk als api gebruikt, daarom worden de routes voor iedere 'functie' ingesteld in api.php
+
+Notatiewijze:
+
+    Route::post('/addreport', [
+      'uses' => 'ReportController@addReport'
+    ]);
 
 
 ### .env ###
