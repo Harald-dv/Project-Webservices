@@ -2,6 +2,8 @@ Harald De Vriendt
 r0613297
 # Project Webservices README #
 
+[https://haralddv.ddns.net](https://haralddv.ddns.net "haralddv.ddns.net")
+
 ## Beschrijving ##
 Als project maak ik een tool waarop instructeurs van de zweefvliegclub kunnen inloggen en vluchtverslagen kunnen schrijven, opslaan en bekijken. Ik heb besloten om de login nog niet te implementeren omdat ik zo meer con focussen op de andere functionaliteit.
 
